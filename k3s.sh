@@ -180,7 +180,7 @@ kubectl wait --namespace metallb-system \
                 --selector=component=controller \
                 --timeout=120s
 kubectl apply -f ip-addr.yaml
-kubectl apply -f https://raw.githubusercontent.com/michelix/k3s/l2-ad.yaml
+kubectl apply -f https://raw.githubusercontent.com/michelix/k3s/main/l2-ad.yaml
 
 kubectl get nodes
 kubectl get svc
