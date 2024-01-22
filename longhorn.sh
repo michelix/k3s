@@ -12,7 +12,7 @@ longhorn2=172.16.200.82
 longhorn3=172.16.200.83
 
 # User of remote machines
-user=ubuntu
+user=michelix
 
 # Interface used on remotes
 interface=eth0
@@ -24,7 +24,7 @@ vip=172.16.200.200
 storage=($longhorn1 $longhorn2 $longhorn3)
 
 #ssh certificate name variable
-certName=id_rsa
+certName=id_ansible
 
 #############################################
 #            DO NOT EDIT BELOW              #
@@ -34,9 +34,9 @@ sudo timedatectl set-ntp off
 sudo timedatectl set-ntp on
 
 # add ssh keys for all nodes
-for node in "${storage[@]}"; do
-  ssh-copy-id $user@$node
-done
+#for node in "${storage[@]}"; do
+#  ssh-copy-id $user@$node
+#done
 
 # add open-iscsi - needed for Debian and non-cloud Ubuntu
 if ! command -v sudo service open-iscsi status &> /dev/null
