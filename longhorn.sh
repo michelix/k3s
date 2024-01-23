@@ -30,8 +30,8 @@ certName=id_ansible
 #            DO NOT EDIT BELOW              #
 #############################################
 # For testing purposes - in case time is wrong due to VM snapshots
-sudo timedatectl set-ntp off
-sudo timedatectl set-ntp on
+#sudo timedatectl set-ntp off
+#sudo timedatectl set-ntp on
 
 # add ssh keys for all nodes
 #for node in "${storage[@]}"; do
